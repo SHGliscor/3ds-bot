@@ -31,13 +31,8 @@ This roadmap is organized for GitHub Projects, milestones, or issues. Each check
 - [x] Validate Mudkip night detection
 - [x] Add Auto / Day / Night lighting profile
 - [x] Add starter hunt stats
-- [x] Add pause / resume support
-- [x] Freeze elapsed time while paused or stopped
-- [x] Freeze average attempt time while paused or stopped
-- [x] Add Discord webhook ping support
 - [x] Move Activity Log to separate window
 - [x] Keep video output fixed size while app window is resizable
-- [x] Set default bot layout to 1280x800
 
 ### Remaining validation
 
