@@ -36,21 +36,21 @@ This roadmap is organized for GitHub Projects, milestones, or issues. Each check
 
 ### Remaining validation
 
-- [ ] Run one final Torchic non-shiny regression test with Auto Day/Night enabled
-- [ ] Run one final Treecko non-shiny regression test with Auto Day/Night enabled
-- [ ] Run one final Mudkip non-shiny regression test with Auto Day/Night enabled
-- [ ] Confirm logs show correct Auto Day/Night profile selection
-- [ ] Confirm Discord ping triggers only on safety hold
-- [ ] Confirm pause/resume does not inflate elapsed time or average attempt time
+- [x] Run one final Torchic non-shiny regression test with Auto Day/Night enabled
+- [x] Run one final Treecko non-shiny regression test with Auto Day/Night enabled
+- [x] Run one final Mudkip non-shiny regression test with Auto Day/Night enabled
+- [x] Confirm logs show correct Auto Day/Night profile selection
+- [x] Confirm Discord ping triggers only on safety hold
+- [x] Confirm pause/resume does not inflate elapsed time or average attempt time
 
 ### Acceptance criteria
 
-- [ ] Treecko, Torchic, Mudkip, and Random can run without manual intervention
-- [ ] Known shiny starters safety-hold
-- [ ] Known non-shiny starters reset/continue
-- [ ] Day and night lighting both work
-- [ ] No false hold from normal send-out animation
-- [ ] No reset-over on known shiny samples
+- [x] Treecko, Torchic, Mudkip, and Random can run without manual intervention
+- [x] Known shiny starters safety-hold
+- [x] Known non-shiny starters reset/continue
+- [x] Day and night lighting both work
+- [x] No false hold from normal send-out animation
+- [x] No reset-over on known shiny samples
 
 ---
 
@@ -60,25 +60,25 @@ This roadmap is organized for GitHub Projects, milestones, or issues. Each check
 
 ### Tasks
 
-- [ ] Build PyInstaller one-file EXE
-- [ ] Confirm app launches on Windows without source files
-- [ ] Confirm n3DS_view launches or embeds correctly
-- [ ] Confirm assets load correctly in EXE mode
-- [ ] Confirm settings save to writable user folder
-- [ ] Confirm recordings save to writable user folder
-- [ ] Confirm hunt logs save correctly
-- [ ] Confirm stats files save correctly
-- [ ] Confirm Discord webhook works from EXE
-- [ ] Confirm Activity Log window works from EXE
-- [ ] Confirm 1280x800 layout on target desktop
-- [ ] Confirm fixed video output remains stable after resizing app
+- [x] Build PyInstaller one-file EXE
+- [x] Confirm app launches on Windows without source files
+- [x] Confirm n3DS_view launches or embeds correctly
+- [x] Confirm assets load correctly in EXE mode
+- [x] Confirm settings save to writable user folder
+- [x] Confirm recordings save to writable user folder
+- [x] Confirm hunt logs save correctly
+- [x] Confirm stats files save correctly
+- [x] Confirm Discord webhook works from EXE
+- [x] Confirm Activity Log window works from EXE
+- [x] Confirm 1280x800 layout on target desktop
+- [x] Confirm fixed video output remains stable after resizing app
 
 ### Acceptance criteria
 
-- [ ] A user can run the bot from `3DS Shiny Hunter.exe`
-- [ ] No Python installation required for end user
-- [ ] No source code folder required for normal use
-- [ ] No missing-file errors on clean test machine
+- [x] A user can run the bot from `3DS Shiny Hunter.exe`
+- [x] No Python installation required for end user
+- [x] No source code folder required for normal use
+- [x] No missing-file errors on clean test machine
 
 ---
 
