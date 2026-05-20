@@ -5,7 +5,7 @@ where the bot is at right now
 
 | Area                                       |   Progress |
 | ------------------------------------------ | ---------: |
-| Fixed viewer / real 3DS capture layout     |    **90%** |
+| Fixed viewer / real 3DS capture layout     |    **100%** |
 | Random Encounter UI / Hunt Controls        |    **90%** |
 | Live Stats counting                        | **85–90%** |
 | Species counts / Detected / Match display  | **85–90%** |
