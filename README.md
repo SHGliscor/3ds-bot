@@ -3,14 +3,16 @@ a 3ds bot using official hardware + input redirection (luma 3ds cfw) and a katsu
 
 where the bot is at right now 
 
-| Area                              |             Status |
-| --------------------------------- | -----------------: |
-| Starter hunting                   |         **85–90%** |
-| Random Encounter UI               |         **80–85%** |
-| Live Stats                        |         **75–80%** |
-| Route dropdown/profile system     |         **55–60%** |
-| OCR confidence/crop trust         |         **45–55%** |
-| Route coverage                    |         **25–35%** |
-| Safe Random Encounter automation  |         **20–30%** |
-| Fully trusted “100%” bot behavior | **65–70% overall** |
+| Area                                       |   Progress |
+| ------------------------------------------ | ---------: |
+| Fixed viewer / real 3DS capture layout     |    **90%** |
+| Random Encounter UI / Hunt Controls        |    **90%** |
+| Live Stats counting                        | **85–90%** |
+| Species counts / Detected / Match display  | **85–90%** |
+| Route 101 report-only validation           | **85–90%** |
+| Source-backed route data import            | **65–70%** |
+| Multi-route live validation                | **20–30%** |
+| Manual unlock readiness                    | **55–65%** |
+| Actual supervised RUN unlock               |  **0–10%** |
+| Fully automated safe Random Encounter mode | **35–45%** |
 
