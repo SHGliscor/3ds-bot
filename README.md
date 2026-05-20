@@ -24,4 +24,17 @@ where the bot is at right now
 | Manual shiny-hunt assistant overall            | **82–85%** |
 | Fully automated safe Random Encounter mode     | **45–50%** |
 
+estimated timeline 
+
+| Milestone                         |                                                                       Meaning |                                      Rough effort |
+| --------------------------------- | ----------------------------------------------------------------------------: | ------------------------------------------------: |
+| **Route 101 solid**               | Current focus: Wurmple/Zigzagoon/Poochyena, manual-only, no false shiny flags |                        1–3 more test/build cycles |
+| **Core ORAS route system**        |          Route profiles, species tables, target matching, report review tools |                                         1–2 weeks |
+| **Most land random encounters**   |                         Common grass/cave/surf areas with manual RUN guidance |                                         2–5 weeks |
+| **All ORAS wild encounter areas** |               Grass, caves, surf, fishing, special areas, version differences |                                        1–3 months |
+| **Reliable shiny detection**      |      Proven against real/simulated shiny evidence, not just normal encounters |                 uncertain; probably parallel work |
+| **Safe auto RUN / auto catch**    |                                      Only after detection + safety are proven | later, not part of first full ORAS route coverage |
+
+
+
 
