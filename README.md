@@ -14,4 +14,3 @@ where the bot is at right now
 | Safe Random Encounter automation  |         **20–30%** |
 | Fully trusted “100%” bot behavior | **65–70% overall** |
 
-w
