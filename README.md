@@ -71,9 +71,18 @@ The active focus is fixing live stats and encounter tracking on Fiery Path.
 
 Current test target:
 
-```text
+
 Fiery Path:
 - Koffing should update last seen
 - Numel should increment species count correctly
 - Live stats should update every confirmed encounter
 - No input/touch/button actions should be sent
+
+inpiration for this 3ds bot was taken from 
+
+https://github.com/40Cakes/pokebot-gen3
+https://github.com/PokemonAutomation
+https://github.com/wyanido/pokebot-nds
+
+
+
