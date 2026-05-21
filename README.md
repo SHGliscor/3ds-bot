@@ -1,90 +1,89 @@
-## 3ds Bot Project Progress So Far
+# 3ds Bot Project — Completed So Far
 
-The 3ds bot has moved from a basic prototype/mockup into a supervised detection and reporting tool. It is currently designed to stay safe: report-only, portable-only, and input-locked. No RUN, touch, A/B, D-pad, battle, or catch automation has been enabled yet.
+Current stable base: **RE-32c**
 
-## Completed So Far
+## Overall status
 
-| Area | What We Have Done | Status |
-|---|---|---:|
-| Core app structure | Built a portable Windows-style bot package with GUI, reports, recordings folders, logs, and organized build outputs. | Done |
-| Clean ZIP structure | Updated builds so files sit inside one top-level folder and reports/logs are moved into their own folders instead of cluttering the root. | Done |
-| Safety lock system | Added safety locks so the bot remains report-only and cannot send input/touch/button actions. | Done |
-| Input authority | Kept RUN/input redirection as a planned/report-only layer, locked by default. | Locked |
-| Capture/viewer layout | Built the main game viewer UI and cleaned the layout around the gameplay frame. | Mostly done |
-| Black border cleanup | Improved the viewer so capture-card black borders are visually reduced while keeping gameplay dimensions. | Done |
-| Live stats panel | Added live stats into the UI and moved it into cleaner empty space around the viewer. | In progress |
-| Live hunt cleanup | Removed unnecessary live hunt text/labels and reduced clutter in the main UI. | Done |
-| Species count | Added species count tracking and live encounter counting. | In progress |
-| Last seen tracking | Added last-seen Pokémon tracking, but it still needs fixing for some routes/species like Koffing/Numel tests. | Needs work |
-| OCR encounter detection | Added OCR-based Pokémon name detection from the encounter/nameplate area. | Working, needs polish |
-| OCR audit/reporting | Added OCR audit output so detections can be checked from reports. | Done |
-| Route profile support | Added route profiles and route/profile loading. | In progress |
-| Route selector/search | Added route selector/search and route trust warnings. | Done |
-| Route confidence tiers | Added GREEN/YELLOW/RED route confidence tiers. | Done |
-| Route 101 profile | Built and tested Route 101 as a known working ORAS route profile. | Working |
-| Bulk ORAS route profiles | Added many ORAS land route profiles as RED/UNTESTED placeholders. | Added, needs validation |
-| Fiery Path testing | Began testing Fiery Path; found live stats/last seen/species count issues. | Active issue |
-| Target matching | Added target Pokémon matching/reporting logic. | In progress |
-| Target switch validation | Built a manual/report-only validation kit for switching target Pokémon such as Zigzagoon/Poochyena. | Done |
-| Decision timeline | Added report fields showing detected Pokémon, target match, final action, safety lock, OCR audit, and decision timeline. | Done |
-| Manual unlock review gate | Added a report-only manual unlock qualification gate. | Done |
-| RUN automation | Still disabled. Bot currently reports HOLD/NO_RUN rather than pressing buttons. | Not enabled |
-| RAM/NTR research | Pulled RAM/address references from PKMN-NTR and packaged ORAS address tables into CSV/JSON. | Researched, paused |
-| External references | Added PokémonDB as the primary route/encounter data source, with 3DSRNGTool, PKHeX, and PKMN-NTR as supporting references. | Done |
-| Build metadata | Added requirement that report/build labels, app titles, logs, dashboards, and metadata match the current build name. | Standard added |
-| Testing workflow | Shifted testing toward small 5–10 encounter batches due to limited time. | Standard added |
+| Area | Completion | Status |
+|---|---:|---|
+| Report-only ORAS hunting assistant | 80–85% | Stable working milestone |
+| Full bot goal | 55–60% | Good progress, automation not started |
+| Auto-catch shiny goal | 25–30% | Safety groundwork done, catch automation not started |
 
-## Current State
+## Confirmed working
 
-| Bot Mode | Estimated Progress |
-|---|---:|
-| Safe supervised detection bot | 65–70% |
-| Full automated RE shiny hunting bot | 45–50% |
-| Fully polished, route-complete ORAS bot | 35–45% |
-| **Total overall progress** | **45–50%** |
-
-## Current Strengths
-
-- The bot is now much more than a mockup.
-- The UI is cleaner and more practical.
-- Safety locks are strong.
-- Route/profile infrastructure exists.
-- OCR detection works enough to drive reports and live stats.
-- Reports are useful for debugging.
-- Build packaging is cleaner and easier to test.
-- We have started ORAS-specific route support.
-
-## Current Known Issues
-
-| Issue | Notes |
+| Feature | Status |
 |---|---|
-| Live stats not always updating | Koffing and Numel tests showed missed or incorrect updates. |
-| Last seen not reliable yet | Last seen did not update correctly for Koffing. |
-| Species count still inconsistent | Fiery Path test only added one Numel when more were expected. |
-| Route profiles need validation | Bulk ORAS routes exist but many are still RED/UNTESTED. |
-| OCR still needs hardening | Needs better encounter-state handling and species confirmation. |
-| No real automation yet | RUN/input control remains locked/report-only. |
+| Clean portable-only build layout | Done |
+| One top-level ZIP folder | Done |
+| Clean root folder with only useful launch/control files | Done |
+| No RAM/NTR active in current branch | Done |
+| Report-only mode | Done |
+| Input locked | Done |
+| No RUN/touch/button/catch authority | Done |
+| Faster route search | Done |
+| Route catalog caching | Done |
+| Route search debounce | Done |
+| Fast UI encounter update | Done |
+| Top banner updates quickly | Done |
+| Live stats seen counter | Done |
+| Live stats last seen | Done |
+| Live stats species counts | Done |
+| Shiny count de-duplication | Done |
+| Same-battle duplicate Start guard | Done |
+| Koffing OCR fallback | Done |
+| Route 101 full profile fix | Done |
+| Fiery Path profile selection | Done |
+| Meteor Falls profile selection | Done |
+| Route 119 Surf/Fishing profile selection | Done |
+| Water route species counting | Done |
+| All-shiny patch test controls in root | Done |
+| All-shiny patch safety mode | Done |
+| Shiny HOLD_NO_RUN safety path | Done |
+| Evidence/freeze saving for shiny candidates | Done |
+| Storage helper BAT files | Done |
+| Old LocalAppData cleanup helper | Done |
+| Current report label fix | Done |
+| Code/speed audit cleanup | Done |
 
-## Current Focus
+## Route/profile work completed
 
-The active focus is fixing live stats and encounter tracking on Fiery Path.
+| Area | Status |
+|---|---|
+| Route 101 | Bot-tested, stable |
+| Fiery Path | UI/profile tested, OCR species counting working |
+| Meteor Falls | UI/profile no-leak tested |
+| Route 119 Surf/Fishing + Feebas Group | Tested, Tentacool counting confirmed |
+| Main ORAS land routes | Added as source-backed profiles |
+| Cave/interior profiles | Added as source-backed profiles |
+| Surf/water/fishing groups | Added as grouped profiles |
+| Trust labels split into data/runtime/input status | Done |
 
-Current test target:
+## Important fixes completed
 
+| Build | Fix |
+|---|---|
+| RE-22b | Portable-only storage and Route 101 full-profile fix |
+| RE-22c | ORAS water/surf/fishing profile groups |
+| RE-22h | All-shiny patch raw detector reached 100% on Route 101 sample |
+| RE-22j | Route/profile allowlist added to live stats OCR |
+| RE-22l | Fast UI update before OCR completes |
+| RE-22x | Koffing OCR fallback |
+| RE-22w | Shiny count de-duplication |
+| RE-22z | Same-battle duplicate Start guard fixed and confirmed |
+| RE-32a | Stable report-only milestone |
+| RE-32b | Report label fix |
+| RE-32c | Code and speed audit cleanup |
 
-Fiery Path:
-- Koffing should update last seen
-- Numel should increment species count correctly
-- Live stats should update every confirmed encounter
-- No input/touch/button actions should be sent
+## Current safety status
 
-inspiration for this 3ds bot was taken from 
+The bot is still intentionally locked:
 
-https://github.com/40Cakes/pokebot-gen3
-
-https://github.com/PokemonAutomation
-
-https://github.com/wyanido/pokebot-nds
-
-
-
+```text
+Mode: REPORT ONLY
+Input: LOCKED
+RUN automation: DISABLED
+Touch input: DISABLED
+Button input: DISABLED
+Catch automation: DISABLED
+RAM/NTR branch: DISABLED
