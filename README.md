@@ -1,6 +1,6 @@
-## RE Bot Project Progress So Far
+## 3ds Bot Project Progress So Far
 
-The RE bot has moved from a basic prototype/mockup into a supervised detection and reporting tool. It is currently designed to stay safe: report-only, portable-only, and input-locked. No RUN, touch, A/B, D-pad, battle, or catch automation has been enabled yet.
+The 3ds bot has moved from a basic prototype/mockup into a supervised detection and reporting tool. It is currently designed to stay safe: report-only, portable-only, and input-locked. No RUN, touch, A/B, D-pad, battle, or catch automation has been enabled yet.
 
 ## Completed So Far
 
