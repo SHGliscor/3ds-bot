@@ -78,10 +78,12 @@ Fiery Path:
 - Live stats should update every confirmed encounter
 - No input/touch/button actions should be sent
 
-inpiration for this 3ds bot was taken from 
+inspiration for this 3ds bot was taken from 
 
 https://github.com/40Cakes/pokebot-gen3
+
 https://github.com/PokemonAutomation
+
 https://github.com/wyanido/pokebot-nds
 
 
