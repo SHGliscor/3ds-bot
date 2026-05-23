@@ -1,4 +1,4 @@
-Current Status: 62% complete — stable GUI/input base, shiny detection training in progress, full automation still safety-gated.
+**Current status: 64% complete — stable GUI/input base, supervised battle-run working, shiny detection and false-positive protection still in progress.**
 
 inspiration taken from 
 
@@ -66,4 +66,3 @@ The main blocker is still **reliable shiny detection**. Once shiny detection is 
 
 ## GitHub Status Line
 
-**Current status: 64% complete — stable GUI/input base, supervised battle-run working, shiny detection and false-positive protection still in progress.**
