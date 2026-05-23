@@ -64,5 +64,4 @@ The main blocker is still **reliable shiny detection**. Once shiny detection is 
 6. Add shiny stop/alert.
 7. Unlock full automation only after safety checks pass.
 
-## GitHub Status Line
 
