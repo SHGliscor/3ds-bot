@@ -1,137 +1,84 @@
-# 3DS Bot Project Roadmap and Progress
+Current Status: 62% complete — stable GUI/input base, shiny detection training in progress, full automation still safety-gated.
 
-Last updated: 2026-05-22
+inspiration taken from 
 
-This README tracks the current state of the ORAS shiny hunting bot project.
+pokebot-gen3
+pokebot-nds
+pokemonautomation 
 
-GitHub currently represents the stable **RE-32c** baseline, while active local/chat development has moved into the **RE-33 safety, preflight, auto-focus, and guarded input planning** track.
+links to be added
 
-## Overall progress
+# 3DS Shiny Hunting Bot Progress Breakdown
 
-| Goal | GitHub-tracked progress | Current project estimate | Notes |
-|---|---:|---:|---|
-| Report-only ORAS hunting assistant | 80-85% | 85-88% | Stable working milestone. Viewer/OCR, route profiles, encounter logging, and reports are mostly working. |
-| Full shiny hunting bot | 55-60% | 72-75% | Core detection/reporting is strong. Remaining work is mostly safe automation and long-run reliability. |
-| Auto-catch shiny goal | 25-30% | 30-35% | Safety groundwork exists, but real catch automation is intentionally not active yet. |
-| Safe real input / auto-run | 0-10% | 35-45% | Input authority is still locked. Current work is preflight, manual unlock, auto-focus, and guarded RUN automation. |
-| Full hands-off hunting loop | Not active | 45-55% | Architecture and reports are in place, but the real loop needs safe input unlock and soak testing. |
+Current project branch/base: RE-New series  
+Current estimated completion: **62%**
 
-## Current roadmap percentages
+## Progress by Area
 
-| Area | Progress | Status |
-|---|---:|---|
-| Clean portable build layout | 100% | Done |
-| Single top-level ZIP folder layout | 100% | Done |
-| Viewer/OCR stability | 85% | Mostly stable |
-| Route/profile detection | 80-85% | Strong progress |
-| ORAS route/profile coverage | 80-85% | Built-in profiles working; more coverage and validation still useful |
-| Encounter logging and reports | 90% | Stable |
-| Live stats and species counts | 85-90% | Working, with ongoing UI polish |
-| Shiny candidate detection/evidence saving | 85-90% | Safety hold path exists |
-| UI polish/status panels | 75-80% | Improved, still needs clean start/stop and focus controls |
-| Safety/preflight system | 80% | Strong report-only safety; manual unlock path still staged |
-| Auto-focus UI helper | 40-50% | Next active step |
-| Manual unlock token workflow | 55-65% | Preflight/report-ready, real input still blocked by design |
-| Input redirection layer | 35-45% | Planned/present as report-only safety layer |
-| Auto-run from battle | 35-45% | Planned next major milestone, not active by default |
-| Full encounter loop automation | 45-55% | Needs safe RUN automation first |
-| Long soak reliability | 50-60% | Needs short test batches first, then longer validation |
-| Auto-catch shiny | 25-35% | Future stage only after RUN/input safety is proven |
+| Area | Status | Progress |
+|---|---:|---:|
+| Clean new project base | Passed | 100% |
+| Modular app structure | Passed | 100% |
+| GUI launch and layout | Passed | 95% |
+| Fixed 3DS viewer frame | Passed | 100% |
+| Locked gameplay ROI/crop | Passed | 100% |
+| n3DS View launch/docking | Passed | 95% |
+| InputRedirection connection/manual buttons | Passed | 90% |
+| Supervised button sequences | Passed | 90% |
+| Safe run-from-battle sequence | Passed | 85% |
+| Recording/clip scout workflow | Working | 80% |
+| Non-shiny/shiny comparison workflow | Working | 75% |
+| Shiny detection logic | In progress | 55% |
+| False-positive protection | In progress | 45% |
+| Day/night robustness | In progress | 40% |
+| Route/background coverage | Planned/In progress | 35% |
+| Encounter species detection | In progress | 45% |
+| Route profiles | In progress | 45% |
+| Hunt method support | Planned | 25% |
+| Full auto encounter loop | Not unlocked yet | 20% |
+| Full unattended automation | Safety-gated | 10% |
+| Packaging/build polish | Working | 75% |
+| GitHub documentation/readme | Needs update | 35% |
 
-## Confirmed completed milestones
+## Overall Estimate
 
-- Portable-only build structure.
-- Clean root folder and organized reports, recordings, and logs.
-- Report-only mode.
-- Input locked by default.
-- No RUN, touch, button, or catch authority in the stable branch.
-- Fast route search, route catalog caching, and route search debounce.
-- Fast UI encounter updates.
-- Top banner updates quickly.
-- Live stats: seen counter, last seen, and species counts.
-- Shiny count de-duplication.
-- Same-battle duplicate Start guard.
-- Koffing OCR fallback.
-- Route 101 full profile fix.
-- Fiery Path profile selection.
-- Meteor Falls profile selection.
-- Route 119 Surf/Fishing profile selection.
-- Water route species counting.
-- All-shiny patch test controls and safety mode.
-- Shiny HOLD_NO_RUN safety path.
-- Evidence/freeze saving for shiny candidates.
-- Storage helper BAT files and old LocalAppData cleanup helper.
-- Current report/build label fix.
-- Code/speed audit cleanup.
+**Current bot completion: ~62%**
 
-## Route/profile work completed
+The project is past the basic prototype stage. The app launches, the viewer is stable, the crop geometry is locked, manual InputRedirection works, supervised sequences work, and the shiny comparison workflow is now being trained/tested.
 
-| Area | Status |
-|---|---|
-| Route 101 | Bot-tested, stable |
-| Fiery Path | UI/profile tested, OCR species counting working |
-| Meteor Falls | UI/profile no-leak tested |
-| Route 119 Surf/Fishing + Feebas Group | Tested, Tentacool counting confirmed |
-| Main ORAS land routes | Added as source-backed profiles |
-| Cave/interior profiles | Added as source-backed profiles |
-| Surf/water/fishing groups | Added as grouped profiles |
-| Trust labels split into data/runtime/input status | Done |
+The main remaining work is:
 
-## Current safety status
+1. Finish reliable shiny detection.
+2. Reduce false positives.
+3. Add day/night, cave, grass, water/surfing, and route background handling.
+4. Expand route/profile data.
+5. Add more shiny hunting methods.
+6. Move from supervised actions into safe automation.
+7. Only then unlock full unattended hunting.
 
-The bot is still intentionally locked:
+## Important Safety Note
 
-```text
-Mode: REPORT ONLY
-Input: LOCKED
-RUN automation: DISABLED
-Touch input: DISABLED
-Button input: DISABLED
-Catch automation: DISABLED
-RAM/NTR branch: DISABLED
-```
+Full automation is **not unlocked yet**.  
+The bot should stay supervised until shiny detection and false-positive protection are much more reliable.
 
-Real input must remain blocked until the manual unlock, preflight, focus validation, and RUN decision guard are all passing.
+## Current Testing Focus
 
-## Next build direction
+The next tests should focus on:
 
-### RE-33 safety/input preflight track
+- Day non-shiny Poochyena
+- Night non-shiny Poochyena
+- Day shiny Poochyena
+- Night shiny Poochyena
+- Later: cave, surfing, water, and different route backgrounds
 
-1. Add automatic UI focus helper.
-2. Keep real input locked by default.
-3. Add clear start/stop controls without changing the 3DS viewer dimensions.
-4. Improve manual unlock token preflight reports.
-5. Add guarded auto-run decision reporting.
-6. Only enable real RUN input after all safety checks pass:
-   - correct window focus,
-   - correct battle state,
-   - correct target/non-target decision,
-   - manual unlock token present,
-   - no shiny candidate detected,
-   - no unknown or OCR-unsafe state.
+## Project Direction
 
-## What should be tested next
+The current best path is:
 
-Use small 3-5 encounter batches.
-
-1. Confirm the app opens and focuses cleanly.
-2. Confirm the 3DS viewer/gameplay dimensions are unchanged.
-3. Confirm reports still generate in the correct folders.
-4. Confirm route/profile selection still works.
-5. Confirm encounter species counts still save correctly.
-6. Confirm safety reports still say real input is blocked by default.
-7. Confirm no RUN, touch, or button input is sent unless the future manual unlock path explicitly allows it.
-
-## Progress summary
-
-Current best estimate:
-
-```text
-GitHub stable baseline: 58-60% complete
-Current active project estimate: 72-75% complete
-After auto-focus + safer start/stop + preflight polish: 76-78%
-After safe auto-run from battle works: 82-86%
-After full encounter loop and reliability testing: 90%+
-```
-
-The largest remaining milestone is safe real input control. Once guarded auto-run from battle works reliably, the project will move from a report-only assistant toward a true hands-off shiny hunting loop.
+1. Lock shiny detection first.
+2. Add greyscale/sparkle/frame-difference checks.
+3. Add profile-aware background handling.
+4. Add safe auto-run.
+5. Add full encounter loop.
+6. Add shiny stop/alert.
+7. Add more hunt methods.
