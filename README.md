@@ -3,7 +3,9 @@
 inspiration taken from 
 
 pokebot-gen3
+
 pokebot-nds
+
 pokemonautomation 
 
 links to be added
