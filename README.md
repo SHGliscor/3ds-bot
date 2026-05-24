@@ -1,69 +1,66 @@
-**Current status: 64% complete — stable GUI/input base, supervised battle-run working, shiny detection and false-positive protection still in progress.**
+# 3ds Bot Progress Update
 
-inspiration taken from 
+**Current estimated completion: 67%**
 
-pokebot-gen3
+## Summary
 
-pokebot-nds
+The 3ds bot is now past the basic working-app stage. The main GUI, fixed 3DS viewer, locked ROI crop, n3DS View docking, InputRedirection controls, supervised battle-run flow, compact exports, and Auto Test Window workflow are mostly in place.
 
-pokemonautomation 
+The current focus is improving Auto Test Window reliability across multiple encounters, strengthening shiny detection, reducing false positives, and preparing for safer automation.
 
-links to be added
+---
 
-# Current Bot Percentage Breakdown
+## Progress Breakdown
 
-Current base: **RE-New series**  
-Current estimated completion: **64%**
-
-## Overall Progress
-
-| Section | Progress | Status |
+| Area | Progress | Status |
 |---|---:|---|
-| Clean new project restart | 100% | Passed |
-| Modular file structure | 100% | Passed |
-| GUI launch stability | 95% | Passed |
-| GUI cleanup / tabbed panels | 90% | Passed |
-| Fixed 3DS viewer frame | 100% | Passed |
+| Clean 3dd base | 100% | Passed |
+| Modular app structure | 100% | Passed |
+| GUI launch | 95% | Passed |
+| Fixed 840×600 3DS viewer | 100% | Passed |
 | Locked ROI crop geometry | 100% | Passed |
-| n3DS View auto-launch / dock | 95% | Passed |
-| InputRedirection connection | 90% | Working |
-| Manual button testing | 95% | Passed |
-| Supervised input sequences | 90% | Passed |
-| Battle menu run sequence | 90% | Passed |
-| Recording / clip scout workflow | 85% | Working |
-| Shiny / non-shiny comparison workflow | 80% | Working |
-| Shiny detection logic | 60% | In progress |
-| Sparkle / greyscale / frame-difference detection | 50% | In progress |
-| False-positive protection | 50% | In progress |
-| Day / night robustness | 45% | In progress |
-| Route/background profiles | 40% | In progress |
-| Cave / surfing / water backgrounds | 20% | Planned |
-| Species detection | 45% | In progress |
-| Route profile system | 45% | In progress |
-| Hunt method support | 25% | Planned |
-| Safe auto-run from battle | 70% | Supervised working |
-| Full encounter loop | 25% | Not unlocked |
-| Full shiny stop/alert system | 45% | In progress |
+| n3DS View launch/docking | 95% | Passed |
+| InputRedirection manual controls | 95% | Passed |
+| Supervised button sequences | 90% | Passed |
+| Run-from-battle sequence | 90% | Passed |
+| Auto Test Window capture | 85% | Working |
+| Auto Test Window re-arm | 70% | Improving |
+| Second black-screen outro protection | 75% | Being tuned |
+| Overworld reset detection | 65% | Improving |
+| GUI responsiveness | 85% | Improved |
+| Compact test export | 85% | Working |
+| Shiny/non-shiny test workflow | 85% | Working |
+| Shiny detection foundation | 65% | In progress |
+| False-positive protection | 60% | In progress |
+| Day/night shiny robustness | 55% | In progress |
+| Species/background handling | 45% | In progress |
+| Route/background profiles | 45% | In progress |
+| Cave/surfing/water profiles | 20% | Planned |
+| Full auto encounter loop | 35% | Not unlocked |
 | Full unattended automation | 10% | Safety-gated |
-| Build packaging | 75% | Working |
-| GitHub documentation | 40% | Needs update |
 
-## Current Estimated Completion
+---
 
-**64% complete**
+## Current Status
 
-The bot now has a solid working base: GUI, fixed viewer, locked crop, InputRedirection, manual controls, supervised run-from-battle, and shiny/non-shiny test workflow are all working.
+**Overall progress: 67% complete**
 
-The main blocker is still **reliable shiny detection**. Once shiny detection is dependable across day/night and different backgrounds, the project can move much faster toward full automation.
+The project has a stable base and is moving into reliability tuning. The most important blocker is not the GUI or input system anymore. The key blocker is making detection and re-arm behavior reliable enough to support safe automation.
 
-## Current Priority
+---
 
-1. Finish shiny detection.
-2. Add stronger false-positive protection.
-3. Confirm day/night detection stability.
-4. Add cave, surfing, and route background profiles.
-5. Finish safe auto-run loop.
-6. Add shiny stop/alert.
-7. Unlock full automation only after safety checks pass.
+## Current Priorities
 
+1. Make Auto Test Window reliably continue across multiple encounters.
+2. Finish shiny detection confidence scoring.
+3. Reduce false positives.
+4. Make detection stable across day/night lighting.
+5. Add route, cave, surfing, and water background support.
+6. Expand species and route-profile handling.
+7. Unlock fuller automation only after safety checks pass.
 
+---
+
+## GitHub Status Line
+
+**status: 67% complete — stable GUI/input base, supervised battle-run working, Auto Test Window improving, shiny detection and false-positive protection still in progress.**
